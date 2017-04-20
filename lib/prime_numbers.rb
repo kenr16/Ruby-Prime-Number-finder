@@ -6,14 +6,15 @@ class Fixnum
       array.push(time+2)
     end
     array.each do |item|
-      if item % 2 == 0
-        array.delete(item)
+      primes.each do |prime|
+        if item % prime == 0
+          array.delete(item)
+        end
       end
     end
 
 
 
     primes.concat(array)
-    array
   end
 end
